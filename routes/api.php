@@ -64,7 +64,7 @@ Route::middleware('auth:sanctum')->group(function () {
         Route::post('/settings/upload', [ProfileController::class, 'uploadImage']);
 
         Route::put('profile', [ProfileController::class, 'updateProfile']);
-        Route::put('/profile/password', [ProfileController::class, 'updatePassword'])->name('profile.password');
+        Route::put('/profile/password', [ProfileController::class, 'updatePassword'])->name('vendor.profile.password');
 
 
 
@@ -112,7 +112,7 @@ Route::middleware('auth:sanctum')->group(function () {
         Route::get('/dashboard', [AdminHomeController::class, 'dashboard']);
 
         Route::put('profile', [AdminHomeController::class, 'updateProfile']);
-        Route::put('/profile/password', [AdminHomeController::class, 'updatePassword'])->name('profile.password');
+        Route::put('/profile/password', [AdminHomeController::class, 'updatePassword'])->name('admin.profile.password');
 
         Route::ApiResource('categories', ServiceCategoryController::class);
         Route::ApiResource('/plans', PlanController::class);
