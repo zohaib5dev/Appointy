@@ -1,0 +1,49 @@
+/* resources/css/app.css */
+@import "tailwindcss";
+
+@theme {
+    --color-primary-50: #eff6ff;
+    --color-primary-100: #dbeafe;
+    --color-primary-200: #bfdbfe;
+    --color-primary-300: #93c5fd;
+    --color-primary-400: #60a5fa;
+    --color-primary-500: #3b82f6;
+    --color-primary-600: #2563eb;
+    --color-primary-700: #1d4ed8;
+    --color-primary-800: #1e40af;
+    --color-primary-900: #1e3a8a;
+}
+
+@layer components {
+    .card {
+        background-color: white;
+        border-radius: 0.5rem;
+        box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1);
+        border: 1px solid var(--color-gray-200);
+    }
+    .btn-primary {
+        background-color: var(--color-primary-600);
+        color: white;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        border-radius: 0.5rem;
+    }
+    .btn-primary:hover {
+        background-color: var(--color-primary-700);
+    }
+    .input {
+        width: 100%;
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        border: 1px solid var(--color-gray-300);
+        border-radius: 0.5rem;
+    }
+    .input:focus {
+        outline: none;
+        ring: 2px solid var(--color-primary-500);
+    }
+}
